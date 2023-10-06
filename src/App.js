@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Transferdata from "./component/Transferdata";
+import Course from "./component/course/Course";
+import Login from "./component/login/Login";
+import Logindata from "./component/login/Logindata";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <BrowserRouter>
+     <Routes>
+<Route path={'/'} element={<Login/>}></Route>
+<Route path={'/Home'} element={<Logindata/>}></Route>
+<Route path={'/Course'} element={<Course/>}></Route>
+
+</Routes>
+</BrowserRouter>
+
+
+
+      {/* <Transferdata username="Afsana" password="afsana" usertype="admin"/> */}
+    {/* <Login/> */}
+    {/* <Course/> */}
     </div>
   );
 }
