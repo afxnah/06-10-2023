@@ -5,6 +5,7 @@ import Login from "./component/login/Login";
 import Logindata from "./component/login/Logindata";
 import Home from "./component/Home/Home";
 import Book from "./component/book/Book";
+import Bookview from "./component/book/Bookview";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 <Route path={'/Course'} element={<Course/>}></Route>
 <Route path={'/Home'} element={<Home/>}></Route>
 <Route path={'/Book'} element={<Book/>}></Route>
-
+<Route path={'/v'} element={<Bookview/>}></Route>
 </Routes>
 </BrowserRouter>
 
